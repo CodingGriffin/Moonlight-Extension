@@ -1,0 +1,36 @@
+#moon-logo {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1; /* Snoozed effect */
+}
+
+#wake {
+    transform: scale(1.2); /* Wake-up scale */
+    opacity: 1; /* Fully visible */
+}
+
+
+.eye-top {
+    transition: fill 0.3s ease;
+}
+
+.eye-top.open {
+    stroke: #000000;
+}
+
+.eye-top.sleep {
+    stroke: none; /* Closed eyes color */
+}
+
+.eye-bottom {
+    transition: fill 0.3s ease;
+}
+
+.eye-bottom.open {
+    stroke: #000000;
+    /* fill: #000000; */
+}
+
+.eye-bottom.sleep {
+    stroke: none; /* Closed eyes color */
+    fill: #000000;
+}
