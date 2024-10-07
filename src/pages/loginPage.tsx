@@ -3,7 +3,7 @@ import MoonLogo from '../components/moonLogo';
 import PasswordPanel from '../components/passwordPanel';
 import SimpleButton from '../components/simpleButton';
 
-const Home: React.FC = () => {
+const LoginPage: React.FC = () => {
     const unlockButtonHandle = () => {
         console.log("ok");
     }
@@ -21,4 +21,4 @@ const Home: React.FC = () => {
     );
 };
 
-export default Home;
+export default LoginPage;
