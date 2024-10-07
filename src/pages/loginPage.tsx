@@ -2,10 +2,13 @@ import React from 'react';
 import MoonLogo from '../components/moonLogo';
 import PasswordPanel from '../components/passwordPanel';
 import SimpleButton from '../components/simpleButton';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage: React.FC = () => {
+    const navigate = useNavigate();
     const unlockButtonHandle = () => {
         console.log("ok");
+        navigate('/home');
     }
     return (
         <>

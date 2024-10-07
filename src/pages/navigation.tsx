@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const Navigation: React.FC = () => {
   return (
     <nav>
-      <Link to="/" className='text-white'>Home</Link>
-      <Link to="/about" className='text-white'>About</Link>
+      <Link to="/" className='text-white'>Login</Link>
+      <Link to="/Home" className='text-white'>Home</Link>
     </nav>
   );
 };

@@ -74,7 +74,7 @@ const SearchInput: React.FC = () => {
     return (
         <>
             <div>
-                <div className="relative m-8 mb-1 rounded-md shadow-sm">
+                <div className="relative m-8 mb-5 rounded-md shadow-sm">
                     <input
                         id="search"
                         name="search"
