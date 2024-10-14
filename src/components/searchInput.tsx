@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import SimpleButton from './simpleButton';
 // interface SearchProps {
 //     searchFunc: Function;
 // }
@@ -34,7 +35,7 @@ const SearchInput: React.FC = () => {
             const response = await axios.get('http://192.168.137.37:5000/api/search/search', {
                 params: {
                     q: inputValue,
-                    num:10,
+                    num:1,
                 },
             });
 
@@ -69,6 +70,27 @@ const SearchInput: React.FC = () => {
         setInputValue(e.target.value);
         if (inputValue != '') {
             setNoKeyWord(false);
+        }
+    }
+
+    const exportHandle = async () => {
+        try {
+            const response = await axios.post("http://192.168.137.37:5000/api/result/export", {data: results}, {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            const exportUrl = response.data.url; // Assuming the response has a `url` field with the link.
+        
+            if (exportUrl) {
+                // Open the URL in a new tab
+                window.open(exportUrl, '_blank');
+                // window.location.href = exportUrl;
+            } else {
+                console.log('No URL returned in export response');
+            }
+        } catch (error) {
+            console.error('Error exporting data:', error);
         }
     }
     return (
@@ -133,6 +155,12 @@ const SearchInput: React.FC = () => {
                     </div>
                     ))}
                 </div>
+                {results.length > 0 ? 
+                    <div>
+                        <SimpleButton title='Export' clickHandle={exportHandle} />
+                    </div>
+                    : null // Empty results shouldn't show the export button
+                }
             </div>
         </>
     );
