@@ -1,5 +1,4 @@
 import React from 'react';
-import MoonLogo from '../components/moonLogo';
 import PasswordPanel from '../components/passwordPanel';
 import SimpleButton from '../components/simpleButton';
 import { useNavigate } from 'react-router-dom';
@@ -11,16 +10,24 @@ const LoginPage: React.FC = () => {
         navigate('/home');
     }
     return (
-        <>
-        <div className='text-center'>
-            <h1 className='text-2xl font-bold text-white p-5'>Moonlight</h1>
-            <hr />
-            <MoonLogo />
-            <p className='text-xl text-white'>Enter your passcode</p>
+        <div className='container mx-auto px-4 mt-10'>
+            <div className='flex justify-center'>
+                <div className='w-20 pr-3'>
+                    <img src='./images/logo.png'  />
+                </div>
+                <div className='text-4xl font-black my-auto font-["Arial"]'>
+                    Moonlight
+                </div>
+            </div>
+            <div className='text-xl mx-20 text-center my-6 font-["Arima"]'>
+                Unlock the Moonlight Extension
+            </div>
             <PasswordPanel />
             <SimpleButton title={"Unlock"} clickHandle={unlockButtonHandle} />
+            <div className='font-["Arima"] text-center'> 
+                Need help? Contact <span className='text-blue-600'>Moonlight Support</span>
+            </div>
         </div>
-        </>
     );
 };
 

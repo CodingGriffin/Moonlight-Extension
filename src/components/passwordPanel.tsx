@@ -11,7 +11,7 @@ const PasswordPanel: React.FC = () => {
                         name="password"
                         type={isPassword?"password":"text"}
                         placeholder="Your unlock passcode"
-                        className="block w-full bg-black rounded-md border-0 py-1.5 px-3 text-white placeholder:text-gray-400 sm:text-lg sm:leading-8"
+                        className="block w-full bg-white rounded-md border-2 border-gray-200 py-3 px-3 placeholder:text-gray-400 dark:bg-black dark:text-white"
                     />
                     <div className="absolute inset-y-0 right-0 flex items-center">
                         <button className="mr-3" onClick={() => setIsPassword(!isPassword)}>
