@@ -102,17 +102,17 @@ const SearchInput: React.FC = () => {
                         id="search"
                         name="search"
                         type="text"
-                        placeholder="Enter Search keywords"
-                        className="block w-full bg-black rounded-md border-0 py-1.5 px-3 text-white placeholder:text-gray-400 sm:text-lg sm:leading-8"
+                        placeholder="Search here..."
+                        className="block w-full dark:bg-black rounded-md border-2 border-gray-300 py-1.5 px-3 text-white placeholder:text-gray-400 sm:text-lg sm:leading-8"
                         onChange={onChangeHandle}
                         onKeyDown={handleKeyPress}
                     />
                     <div className="absolute inset-y-0 right-0 flex items-center">
                         {!isSearching?
                             <button className="mr-3" onClick={searchFuncHandle}>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke='#ffff00' xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke='#ffff00' strokeWidth="1.91667" strokeLinecap="round" strokeLinejoin="round"/>
-                                    <path d="M20.9999 20.9998L16.6499 16.6498" stroke='#ffff00'  strokeWidth="1.91667" strokeLinecap="round" strokeLinejoin="round"/>
+                                <svg className="stroke-current text-gray-800 dark:text-white"  width="24" height="24" fill='none' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke='currentColor' strokeWidth="1.91667" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M20.9999 20.9998L16.6499 16.6498" stroke='currentColor'  strokeWidth="1.91667" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                             </button>:
                             <svg width="24" height="24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" className='mr-3'>

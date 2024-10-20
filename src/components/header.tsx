@@ -8,9 +8,9 @@ const Header = () => {
             <div className="">
                 <MenuBtnIcon />
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center items-center">
                 <Avatar />
-                <span>Uroos Fastima</span>
+                <span className="ml-3 font-bold dark:text-white">Uroos Fastima</span>
             </div>
             <div className="">
                 <ModeToggle />
