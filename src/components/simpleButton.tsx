@@ -13,7 +13,7 @@ const SimpleButton: React.FC<SimpleButtonProps> = ({
     <>
       <div className="m-8">
         <button
-          className="w-full bg-gradient-to-b from-yellow-300 to-yellow-900 opacity-50 text-white px-6 py-2 rounded shadow-lg transition-all duration-300 hover:bg-gradient-to-b hover:from-yellow-200 hover:to-yellow-600 hover:opacity-100 hover:font-bold"
+          className="w-full focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
           onClick={clickHandle}
         >
           {title}

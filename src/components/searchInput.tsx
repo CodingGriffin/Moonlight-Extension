@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import SimpleButton from './simpleButton';
+import MImage from './mImage';
 // interface SearchProps {
 //     searchFunc: Function;
 // }
@@ -116,7 +117,7 @@ const SearchInput: React.FC = () => {
                         name="search"
                         type="text"
                         placeholder="Search here..."
-                        className="block w-full dark:bg-black rounded-md border-2 border-gray-300 px-3 dark:text-white placeholder:text-gray-400 sm:text-lg sm:leading-8"
+                        className="block w-full rounded-md border-2 border-gray-300 py-1.5 px-3 placeholder:text-gray-400 sm:text-lg sm:leading-8 dark:bg-black dark:bg-opacity-15 dark:text-white dark:border-[#E4E6EA]"
                         onChange={onChangeHandle}
                         onKeyDown={handleKeyPress}
                     />
@@ -158,10 +159,17 @@ const SearchInput: React.FC = () => {
                         name="searchCount"
                         type="text"
                         placeholder="10"
-                        className="block w-full dark:bg-black rounded-md border-2 border-gray-300 px-3 dark:text-white placeholder:text-gray-400 sm:text-lg sm:leading-8"
+                        className="block w-full rounded-md border-2 border-gray-300 py-1.5 px-3 placeholder:text-gray-400 sm:text-lg sm:leading-8 dark:bg-opacity-15 dark:bg-black dark:text-white dark:border-[#E4E6EA]"
                         onChange={countChangeHandle}
                         onKeyDown={handleKeyPress}
                     />
+                </div>
+                
+                <div className='mt-3'>
+                    <MImage imgSrc='./images/search_start.png' width='200px' />
+                </div>
+                <div>
+                    <SimpleButton title='Click here to search...' clickHandle={searchFuncHandle} />
                 </div>
                 <div className="grid grid-cols-1 gap-4">
                     {results.map((result, index) => (

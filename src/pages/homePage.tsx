@@ -8,7 +8,11 @@ const HomePage: React.FC = () => {
         <>
         <div className='text-center'>
             <Header />
-            <hr className='mt-3' />
+            <hr className='mt-3 mb-1' />
+            <div>
+                <span className='text-lg font-["Arima"] dark:text-white'>Business Search</span>
+            </div>
+            <hr className='mt-1' />
             <SearchInput />
         </div>
         </>
