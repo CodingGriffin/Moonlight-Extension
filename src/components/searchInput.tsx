@@ -166,7 +166,13 @@ const SearchInput: React.FC = () => {
                 </div>
                 
                 <div className='mt-3'>
-                    <MImage imgSrc='./images/search_start.png' width='200px' />
+                    <MImage 
+                        imgSrc={!isSearching?
+                            './images/search_start.png' :
+                            './images/search_waiting.png'
+                        } 
+                        width='200px' 
+                    />
                 </div>
                 <div>
                     <SimpleButton title='Click here to search...' clickHandle={searchFuncHandle} />
