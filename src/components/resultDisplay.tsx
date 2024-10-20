@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ResultDisplay = ({ results }:any) => {
     const [currentPage, setCurrentPage] = useState(1);
     const resultsPerPage = 5;
+    const navigate = useNavigate();
 
     // Calculate the index of the last result on the current page
     const indexOfLastResult = currentPage * resultsPerPage;
@@ -19,6 +21,10 @@ const ResultDisplay = ({ results }:any) => {
         setCurrentPage(pageNumber);
     };
 
+    const showDetailHandle = (data:any) => {
+        navigate('/detail', {state:data});
+    }
+
     return (
         <>
             {currentResults.length > 0 ? (
@@ -27,6 +33,7 @@ const ResultDisplay = ({ results }:any) => {
                         <div
                             className="grid grid-cols-12 border border-2 border-gray-200 rounded-lg mx-3 items-center p-1 my-1 hover:bg-gray-200 cursor-pointer dark:bg-[#C4C4C4]"
                             key={index}
+                            onClick={()=>showDetailHandle(res)}
                         >
                             <div className="text-3xl font-black font-['Abhaya Libre ExtraBold']">
                                 <span>{indexOfFirstResult + index + 1}</span>
