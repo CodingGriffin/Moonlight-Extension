@@ -27,7 +27,7 @@ const LoginPage: React.FC = () => {
                 Unlock the Moonlight Extension
             </div>
             <PasswordPanel />
-            <SimpleButton title={"Unlock"} clickHandle={unlockButtonHandle} />
+            <SimpleButton title={"Unlock"} clickHandle={unlockButtonHandle} isDisable={false} />
             <div className='font-["Arima"] text-center dark:text-white'> 
                 Need help? Contact <span className='text-blue-600'>Moonlight Support</span>
             </div>

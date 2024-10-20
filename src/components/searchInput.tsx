@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import SimpleButton from './simpleButton';
 import MImage from './mImage';
+import ResultDisplay from './resultDisplay';
+import mockData from '../mockData/scrapedData.json';
 // interface SearchProps {
 //     searchFunc: Function;
 // }
@@ -34,22 +36,32 @@ const SearchInput: React.FC = () => {
     const [noCount, setNoCount] = useState(false);
     const [results, setResults] = useState<ScrapedData[]>([]);
 
+    // const searchFunc = async () => {
+    //     try {
+    //         const response = await axios.get('http://192.168.137.37:5000/api/search/search', {
+    //             params: {
+    //                 q: inputValue,
+    //                 num:50,
+    //             },
+    //         });
+    //         console.log(response);
+
+    //         setResults(response.data.scrapedData);
+    //         setIsSearching(false);
+
+    //     } catch (error) {
+    //         console.log('Error fetching data:', error);
+    //         setIsSearching(false);
+    //     }
+    // };
+
     const searchFunc = async () => {
-        try {
-            const response = await axios.get('http://192.168.137.37:5000/api/search/search', {
-                params: {
-                    q: inputValue,
-                    num:50,
-                },
-            });
-
-            setResults(response.data.scrapedData);
+        // Simulate a delay to mimic an API call
+        setIsSearching(true);
+        setTimeout(() => {
+            setResults(mockData.data.scrapedData); // Set mock data as the results
             setIsSearching(false);
-
-        } catch (error) {
-            console.log('Error fetching data:', error);
-            setIsSearching(false);
-        }
+        }, 1000); // Simulate a 1 second delay
     };
     
     const searchFuncHandle = () => {
@@ -84,26 +96,26 @@ const SearchInput: React.FC = () => {
         }
     }
     
-    const exportHandle = async () => {
-        try {
-            const response = await axios.post("http://192.168.137.37:5000/api/result/export", {data: results}, {
-                headers: {
-                    'Content-Type': 'application/json',
-                }
-            });
-            const exportUrl = response.data.url; // Assuming the response has a `url` field with the link.
+    // const exportHandle = async () => {
+    //     try {
+    //         const response = await axios.post("http://192.168.137.37:5000/api/result/export", {data: results}, {
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             }
+    //         });
+    //         const exportUrl = response.data.url; // Assuming the response has a `url` field with the link.
         
-            if (exportUrl) {
-                // Open the URL in a new tab
-                window.open(exportUrl, '_blank');
-                // window.location.href = exportUrl;
-            } else {
-                console.log('No URL returned in export response');
-            }
-        } catch (error) {
-            console.error('Error exporting data:', error);
-        }
-    }
+    //         if (exportUrl) {
+    //             // Open the URL in a new tab
+    //             window.open(exportUrl, '_blank');
+    //             // window.location.href = exportUrl;
+    //         } else {
+    //             console.log('No URL returned in export response');
+    //         }
+    //     } catch (error) {
+    //         console.error('Error exporting data:', error);
+    //     }
+    // }
     return (
         <>
             <div>
@@ -166,40 +178,46 @@ const SearchInput: React.FC = () => {
                 </div>
                 
                 <div className='mt-3'>
-                    <MImage 
-                        imgSrc={!isSearching?
-                            './images/search_start.png' :
-                            './images/search_waiting.png'
-                        } 
-                        width='200px' 
-                    />
+                    {results.length == 0?
+                        <MImage 
+                            imgSrc={!isSearching?
+                                './images/search_start.png' :
+                                './images/search_waiting.png'
+                            } 
+                            width='200px' 
+                        />:
+                        <>
+                            <ResultDisplay results={results} />
+                            {/* <div className="grid grid-cols-1 gap-4">
+                                {results.map((result, index) => (
+                                <div key={index} className="border p-4 rounded shadow-md">
+                                    <h2 className="text-lg font-bold text-yellow-500">{result.name}</h2>
+                                    <p className="text-gray-300">Industry: {result.types? result.types.map((item:any) => (item + ", ")):'No Data'}</p>
+                                    <p className="text-gray-300">Address: {result.formatted_address || 'No Data'}</p>
+                                    <p className="text-gray-300">Phone Number: {result.phoneNumber || 'No Data'}</p>
+                                    <p className="text-gray-300">Email Address: {result.email || 'No Data'}</p>
+                                    <p className="text-gray-300">Social Links: {result.socialLinks ? result.socialLinks.map((sl:any) => sl + ", ") : 'No Data'}</p>
+                                    <p className="text-gray-300">Website: <a href={result.website} className="text-blue-500 hover:underline">{result.website}</a></p>
+                                    <p className="text-gray-300">Business_status: {result.business_status || 'No Data'}</p>
+                                    <p className="text-gray-300">Opening hours: {result.opening_hours.open_now? 'Open':'Close'}</p>
+                                    <p className="text-gray-300">Google Review Rating: {result.rating || 'No Data'}</p>
+                                    <p className="text-gray-300">User Ratings Total: {result.user_ratings_total || 'No Data'}</p>
+                                </div>
+                                ))}
+                            </div>
+                            {results.length > 0 ? 
+                                <div>
+                                    <SimpleButton title='Export' clickHandle={exportHandle} isDisable={false}/>
+                                </div>
+                                : null // Empty results shouldn't show the export button
+                            } */}
+                        </>
+                    }
                 </div>
                 <div>
-                    <SimpleButton title='Click here to search...' clickHandle={searchFuncHandle} />
+                    <SimpleButton title='Click here to search...' clickHandle={searchFuncHandle} isDisable={isSearching} />
                 </div>
-                <div className="grid grid-cols-1 gap-4">
-                    {results.map((result, index) => (
-                    <div key={index} className="border p-4 rounded shadow-md">
-                        <h2 className="text-lg font-bold text-yellow-500">{result.name}</h2>
-                        <p className="text-gray-300">Industry: {result.types? result.types.map((item:any) => (item + ", ")):'No Data'}</p>
-                        <p className="text-gray-300">Address: {result.formatted_address || 'No Data'}</p>
-                        <p className="text-gray-300">Phone Number: {result.phoneNumber || 'No Data'}</p>
-                        <p className="text-gray-300">Email Address: {result.email || 'No Data'}</p>
-                        <p className="text-gray-300">Social Links: {result.socialLinks ? result.socialLinks.map((sl:any) => sl + ", ") : 'No Data'}</p>
-                        <p className="text-gray-300">Website: <a href={result.website} className="text-blue-500 hover:underline">{result.website}</a></p>
-                        <p className="text-gray-300">Business_status: {result.business_status || 'No Data'}</p>
-                        <p className="text-gray-300">Opening hours: {result.opening_hours.open_now? 'Open':'Close'}</p>
-                        <p className="text-gray-300">Google Review Rating: {result.rating || 'No Data'}</p>
-                        <p className="text-gray-300">User Ratings Total: {result.user_ratings_total || 'No Data'}</p>
-                    </div>
-                    ))}
-                </div>
-                {results.length > 0 ? 
-                    <div>
-                        <SimpleButton title='Export' clickHandle={exportHandle} />
-                    </div>
-                    : null // Empty results shouldn't show the export button
-                }
+                
             </div>
         </>
     );

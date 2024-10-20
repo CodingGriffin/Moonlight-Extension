@@ -1,0 +1,625 @@
+{
+    "data": {
+        "searchQuery": "ireland roofer",
+        "scrapedData": [
+            {
+                "business_status": "OPERATIONAL",
+                "formatted_address": "Nutgrove Office Park, E2, Meadow Park Ave, Dublin 14, D14 W2Y4, Ireland",
+                "geometry": {
+                    "location": {
+                        "lat": 53.2914577,
+                        "lng": -6.2603759
+                    },
+                    "viewport": {
+                        "northeast": {
+                            "lat": 53.29277167989272,
+                            "lng": -6.259182520107277
+                        },
+                        "southwest": {
+                            "lat": 53.29007202010728,
+                            "lng": -6.261882179892721
+                        }
+                    }
+                },
+                "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+                "icon_background_color": "#7B9EB0",
+                "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+                "name": "Irish Roofers Dublin",
+                "opening_hours": {
+                    "open_now": false
+                },
+                "photos": [
+                    {
+                        "height": 3024,
+                        "html_attributions": [
+                            "<a href=\"https://maps.google.com/maps/contrib/103164422500299193973\">A Google User</a>"
+                        ],
+                        "photo_reference": "AdCG2DOzv8YaueSlF3F-Mb2NgcJNWVsoywzJto51MaA6PHn-4ZhXeFK8jZz3eOp5MEMOOezB09CQ1ds7ADZENRxlTg9AjgxsjmXnZ3nahvI8GKdtYlR8IV_VgJBTMFmADE6G3mZdYIvNG-i2I00U1VigwyRR--7tR2rutceqmsxIV4hG72AD",
+                        "width": 4032
+                    }
+                ],
+                "place_id": "ChIJ1Y4EIsENZ0gRc5Goc1FXa90",
+                "plus_code": {
+                    "compound_code": "7PRQ+HR Dublin 14, Ireland",
+                    "global_code": "9C5M7PRQ+HR"
+                },
+                "rating": 4.9,
+                "reference": "ChIJ1Y4EIsENZ0gRc5Goc1FXa90",
+                "types": [
+                    "roofing_contractor",
+                    "store",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "user_ratings_total": 340,
+                "website": "http://www.irishroofers.ie/",
+                "phoneNumber": "(01) 291 0944",
+                "email": "info@irishroofers.ie",
+                "socialLinks": [
+                    "https://twitter.com/IrishRoofers",
+                    "https://www.facebook.com/irish.roofers"
+                ]
+            },
+            {
+                "business_status": "OPERATIONAL",
+                "formatted_address": "1310 William Flinn Hwy, Glenshaw, PA 15116, United States",
+                "geometry": {
+                    "location": {
+                        "lat": 40.5280024,
+                        "lng": -79.9507682
+                    },
+                    "viewport": {
+                        "northeast": {
+                            "lat": 40.52932162989272,
+                            "lng": -79.94949117010727
+                        },
+                        "southwest": {
+                            "lat": 40.52662197010728,
+                            "lng": -79.95219082989271
+                        }
+                    }
+                },
+                "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+                "icon_background_color": "#7B9EB0",
+                "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+                "name": "Ireland Contracting, LLC",
+                "opening_hours": {
+                    "open_now": false
+                },
+                "photos": [
+                    {
+                        "height": 3912,
+                        "html_attributions": [
+                            "<a href=\"https://maps.google.com/maps/contrib/109590971240283380115\">Ireland Contracting</a>"
+                        ],
+                        "photo_reference": "AdCG2DNLFq1U6A8_60S6OMtHllcbtVnK144RzYbd0yxJzZReD2s-D4LpDMi6AhcDsLgwaG-BFq6YfWNeqU3TeRr4QivCVFjE8UJbF83U5WQt-PKQELUTw5Sf1_lumeMqL5qRNyYjWgEfqgwOGPqnrYc7x_Og9n3kFhnXLLSB3TrxR3nxrExp",
+                        "width": 5224
+                    }
+                ],
+                "place_id": "ChIJ1-0-nseMNIgRWjQ4MFCXNE4",
+                "plus_code": {
+                    "compound_code": "G2HX+6M Glenshaw, Pennsylvania, USA",
+                    "global_code": "87G2G2HX+6M"
+                },
+                "rating": 4.8,
+                "reference": "ChIJ1-0-nseMNIgRWjQ4MFCXNE4",
+                "types": [
+                    "roofing_contractor",
+                    "general_contractor",
+                    "electrician",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "user_ratings_total": 287,
+                "website": "https://irelandcontracting.com/?utm_source=gmb&utm_medium=organic",
+                "phoneNumber": "(800) 639-7663",
+                "email": "",
+                "socialLinks": [
+                    "https://www.facebook.com/IrelandContracting?fref=ts",
+                    "https://www.facebook.com/IrelandContracting?fref=ts"
+                ]
+            },
+            {
+                "business_status": "OPERATIONAL",
+                "formatted_address": "61 King St N, Smithfield, Dublin, D07 VR99, Ireland",
+                "geometry": {
+                    "location": {
+                        "lat": 53.3499535,
+                        "lng": -6.276141099999999
+                    },
+                    "viewport": {
+                        "northeast": {
+                            "lat": 53.35128492989271,
+                            "lng": -6.274786470107278
+                        },
+                        "southwest": {
+                            "lat": 53.34858527010727,
+                            "lng": -6.277486129892722
+                        }
+                    }
+                },
+                "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+                "icon_background_color": "#7B9EB0",
+                "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+                "name": "Allguard Roofing",
+                "opening_hours": {
+                    "open_now": true
+                },
+                "photos": [
+                    {
+                        "height": 1080,
+                        "html_attributions": [
+                            "<a href=\"https://maps.google.com/maps/contrib/112253650602019089380\">A Google User</a>"
+                        ],
+                        "photo_reference": "AdCG2DP0RW24Bhx2Z_zc7cwb5JUSNaRZXWOTuD2cWnP0r37_3yUpDSl4EyLnqTmOGna-CMo_JDM8UpcG17NAUedlOx2kRoB5hkueIqxhN-bdFtYdaFTo1EoLcoiU3gVVeJbIF1HjHTPZ9gKsxoTxf4rbEMjyxRJv543WqwmAbBiLgqYzfZHp",
+                        "width": 1081
+                    }
+                ],
+                "place_id": "ChIJ5ZRHXykMZ0gRztaVdGRD9HE",
+                "plus_code": {
+                    "compound_code": "8PXF+XG Dublin, Ireland",
+                    "global_code": "9C5M8PXF+XG"
+                },
+                "rating": 4.9,
+                "reference": "ChIJ5ZRHXykMZ0gRztaVdGRD9HE",
+                "types": [
+                    "roofing_contractor",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "user_ratings_total": 358,
+                "website": "https://www.allguardroofing.ie/",
+                "phoneNumber": "086 835 5050",
+                "email": "",
+                "socialLinks": [
+                    "https://www.facebook.com/allguardroofersdublin",
+                    "https://www.linkedin.com/in/allguard-roofing-roofer-dublin-a7300247/?originalSubdomain=ie"
+                ]
+            },
+            {
+                "business_status": "OPERATIONAL",
+                "formatted_address": "57 Clontarf Rd, Clontarf West, Dublin 3, D03 A7P0, Ireland",
+                "geometry": {
+                    "location": {
+                        "lat": 53.362697,
+                        "lng": -6.2182038
+                    },
+                    "viewport": {
+                        "northeast": {
+                            "lat": 53.36399817989273,
+                            "lng": -6.216892670107277
+                        },
+                        "southwest": {
+                            "lat": 53.36129852010728,
+                            "lng": -6.219592329892721
+                        }
+                    }
+                },
+                "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+                "icon_background_color": "#7B9EB0",
+                "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+                "name": "Irish Roofers",
+                "opening_hours": {
+                    "open_now": false
+                },
+                "photos": [
+                    {
+                        "height": 3024,
+                        "html_attributions": [
+                            "<a href=\"https://maps.google.com/maps/contrib/106976549863476312822\">Irish Roofers</a>"
+                        ],
+                        "photo_reference": "AdCG2DMvIw0cox3I--qBrGoNtUR1uksqhJ8XbQHCaTxc56pDEBdUJpX8i_cWvsxT89pjaVZ5ych_d8pN9RC6TnnQ4yXRg0vG3AWITjp3Lf3x2W6dXDn_oDFkDUV4I4VxJtD6eO-9SU1SRIEtDFT_tDYZR5QEfTVJcYqls58QzWIyCQVOlrmr",
+                        "width": 4032
+                    }
+                ],
+                "place_id": "ChIJDcyWAsENZ0gRTXNeger0Ibo",
+                "plus_code": {
+                    "compound_code": "9Q7J+3P Dublin 3, Ireland",
+                    "global_code": "9C5M9Q7J+3P"
+                },
+                "rating": 4.6,
+                "reference": "ChIJDcyWAsENZ0gRTXNeger0Ibo",
+                "types": [
+                    "roofing_contractor",
+                    "store",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "user_ratings_total": 72,
+                "website": "http://www.irishroofers.ie/",
+                "phoneNumber": "(01) 291 0944",
+                "email": "info@irishroofers.ie",
+                "socialLinks": [
+                    "https://twitter.com/IrishRoofers",
+                    "https://www.facebook.com/irish.roofers"
+                ]
+            },
+            {
+                "business_status": "OPERATIONAL",
+                "formatted_address": "1A Mount Temple Rd, Stoneybatter, Dublin, D07 F898, Ireland",
+                "geometry": {
+                    "location": {
+                        "lat": 53.35123249999999,
+                        "lng": -6.2866684
+                    },
+                    "viewport": {
+                        "northeast": {
+                            "lat": 53.35253262989272,
+                            "lng": -6.285311020107278
+                        },
+                        "southwest": {
+                            "lat": 53.34983297010727,
+                            "lng": -6.288010679892722
+                        }
+                    }
+                },
+                "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+                "icon_background_color": "#7B9EB0",
+                "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+                "name": "Irish Roofers (Stoneybatter)",
+                "opening_hours": {
+                    "open_now": true
+                },
+                "photos": [
+                    {
+                        "height": 1024,
+                        "html_attributions": [
+                            "<a href=\"https://maps.google.com/maps/contrib/106446513502276947213\">A Google User</a>"
+                        ],
+                        "photo_reference": "AdCG2DPRTY5ow9kFUaY0MbABm7GpgI5fYfhzmmok6FB4M3EeOmuhmHwpviD4HUgwQ_Q1IinjJ2Chsf1UchpXc-mdw1OnmGUzfidanba1CTvK0ENJwt9znPiS0osc1SlJTe_uD7mwEVhjMJ0R4Bzfp_lVfA-ZbXHbIG2WKaMxVVy4KJ7pi-Lg",
+                        "width": 768
+                    }
+                ],
+                "place_id": "ChIJs4WETjIMZ0gRfBOrFHmGt6U",
+                "plus_code": {
+                    "compound_code": "9P27+F8 Dublin, Ireland",
+                    "global_code": "9C5M9P27+F8"
+                },
+                "rating": 4.7,
+                "reference": "ChIJs4WETjIMZ0gRfBOrFHmGt6U",
+                "types": [
+                    "roofing_contractor",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "user_ratings_total": 51,
+                "website": "http://www.irishroofers.ie/",
+                "phoneNumber": "(01) 291 0944",
+                "email": "info@irishroofers.ie",
+                "socialLinks": [
+                    "https://twitter.com/IrishRoofers",
+                    "https://www.facebook.com/irish.roofers"
+                ]
+            },
+            {
+                "business_status": "OPERATIONAL",
+                "formatted_address": "Unit G, Oldenway Business Park, Ballybrit, Galway, H91 E65V, Ireland",
+                "geometry": {
+                    "location": {
+                        "lat": 53.28911429999999,
+                        "lng": -9.004769099999999
+                    },
+                    "viewport": {
+                        "northeast": {
+                            "lat": 53.29053212989272,
+                            "lng": -9.003428870107276
+                        },
+                        "southwest": {
+                            "lat": 53.28783247010728,
+                            "lng": -9.00612852989272
+                        }
+                    }
+                },
+                "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+                "icon_background_color": "#7B9EB0",
+                "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+                "name": "KCL Roofing and Guttering",
+                "opening_hours": {
+                    "open_now": false
+                },
+                "photos": [
+                    {
+                        "height": 488,
+                        "html_attributions": [
+                            "<a href=\"https://maps.google.com/maps/contrib/107480857877539737811\">A Google User</a>"
+                        ],
+                        "photo_reference": "AdCG2DNC31O3-NCcC7Lexs8b8jkGFgZfibnOYKz3QE-Fla-k8Ib7VJfLjuimT30uBLvDyEL67artG0TGKef-Ls3Rkpm5zqmuRkD0ZZy271aifNK1DCPIMeTtnaIvZ3AXvnkIsaO1aADvpVNb3dJVxymu8yqxjGahAi1Ycy011KGblalgMTFd",
+                        "width": 960
+                    }
+                ],
+                "place_id": "ChIJzwCOuLaRW0gRIC47BHeJYs8",
+                "plus_code": {
+                    "compound_code": "7XQW+J3 Galway, Ireland",
+                    "global_code": "9C5G7XQW+J3"
+                },
+                "rating": 4.8,
+                "reference": "ChIJzwCOuLaRW0gRIC47BHeJYs8",
+                "types": [
+                    "roofing_contractor",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "user_ratings_total": 18,
+                "website": "https://www.kclroofing.ie/",
+                "phoneNumber": "(091) 734 041",
+                "email": "info@kclroofing.ie",
+                "socialLinks": [
+                    "https://www.facebook.com/kclroofing/"
+                ]
+            },
+            {
+                "business_status": "OPERATIONAL",
+                "formatted_address": "Unit 1, Mayfield Business Park, Cork, T23 WNE5, Ireland",
+                "geometry": {
+                    "location": {
+                        "lat": 51.9141025,
+                        "lng": -8.4245948
+                    },
+                    "viewport": {
+                        "northeast": {
+                            "lat": 51.91548607989272,
+                            "lng": -8.42311237010728
+                        },
+                        "southwest": {
+                            "lat": 51.91278642010727,
+                            "lng": -8.425812029892723
+                        }
+                    }
+                },
+                "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+                "icon_background_color": "#7B9EB0",
+                "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+                "name": "Elite Roofing Ireland Ltd",
+                "opening_hours": {
+                    "open_now": false
+                },
+                "photos": [
+                    {
+                        "height": 756,
+                        "html_attributions": [
+                            "<a href=\"https://maps.google.com/maps/contrib/111659956429173377505\">Erik Kalacis</a>"
+                        ],
+                        "photo_reference": "AdCG2DNyd7EN1ms4q8X2KCLAEwfAR1qSMTAqQ00ypOnL3MjdKIv-T211Cl3elxy8WWETr5wIHuadUV0vz1Tz_2xxC1F_5QVHo4HbowjrSKh0v9VX37WV8R8FV0fzwUQpy9dl-YT4zcTC-4bBzpr5Am5WKv5c8cPaunqa_NUIjt0SpPZGhyMu",
+                        "width": 756
+                    }
+                ],
+                "place_id": "ChIJ89veA66RREgRmvMLEr7ryGo",
+                "plus_code": {
+                    "compound_code": "WH7G+J5 Cork, Ireland",
+                    "global_code": "9C3HWH7G+J5"
+                },
+                "rating": 4.8,
+                "reference": "ChIJ89veA66RREgRmvMLEr7ryGo",
+                "types": [
+                    "roofing_contractor",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "user_ratings_total": 43,
+                "website": "https://www.eliteroofing.ie/",
+                "phoneNumber": "087 395 9536",
+                "email": "customer@eliteroofing.ie",
+                "socialLinks": [
+                    "https://www.facebook.com/EliteRoofingIreland/",
+                    "https://www.facebook.com/EliteRoofingIreland/"
+                ]
+            },
+            {
+                "business_status": "OPERATIONAL",
+                "formatted_address": "Western Parkway Business Park, Unit 64 Block 3, Ballymount Dr, Dublin 12, D12 K229, Ireland",
+                "geometry": {
+                    "location": {
+                        "lat": 53.3132858,
+                        "lng": -6.3484587
+                    },
+                    "viewport": {
+                        "northeast": {
+                            "lat": 53.31463267989272,
+                            "lng": -6.347244270107279
+                        },
+                        "southwest": {
+                            "lat": 53.31193302010728,
+                            "lng": -6.349943929892722
+                        }
+                    }
+                },
+                "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+                "icon_background_color": "#7B9EB0",
+                "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+                "name": "O'Brien Roofing Dublin",
+                "opening_hours": {
+                    "open_now": true
+                },
+                "photos": [
+                    {
+                        "height": 3024,
+                        "html_attributions": [
+                            "<a href=\"https://maps.google.com/maps/contrib/116774616931585748732\">Daniel Devine</a>"
+                        ],
+                        "photo_reference": "AdCG2DMtQJl_E-VWXbz2xMjtNqR25J1GXMHmNfT4jMQ-ifJbRmp2kSd_FNDymzNyiR7rK-cfWfE-ZYNJEBmsO4z2BtBrM7PjhKnX-p8JOq26_B2l0IsrS4kS257SeSXoeVXLFWMmHl_gwxgOvhUmnCqzx6CUzJG1q7rK748XYXR9S5LxaRqY",
+                        "width": 4032
+                    }
+                ],
+                "place_id": "ChIJN438j6EMZ0gRtfa5_01v0bg",
+                "plus_code": {
+                    "compound_code": "8M72+8J Dublin, Ireland",
+                    "global_code": "9C5M8M72+8J"
+                },
+                "rating": 4.7,
+                "reference": "ChIJN438j6EMZ0gRtfa5_01v0bg",
+                "types": [
+                    "roofing_contractor",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "user_ratings_total": 149,
+                "website": "https://obrienroofing.ie/",
+                "phoneNumber": "(01) 419 9606",
+                "email": "",
+                "socialLinks": [
+                    "https://www.facebook.com/obrien.roofing",
+                    "https://ie.linkedin.com/company/obrien-roofing-%26-cladding-ltd",
+                    "https://www.facebook.com/obrien.roofing",
+                    "https://ie.linkedin.com/company/obrien-roofing-%26-cladding-ltd"
+                ]
+            },
+            {
+                "business_status": "OPERATIONAL",
+                "formatted_address": "FLAT 1, 25 Hollybank Rd, Botanic, Dublin 9, D09 CX33, Ireland",
+                "geometry": {
+                    "location": {
+                        "lat": 53.3672933,
+                        "lng": -6.2574991
+                    },
+                    "viewport": {
+                        "northeast": {
+                            "lat": 53.36856782989272,
+                            "lng": -6.256186220107278
+                        },
+                        "southwest": {
+                            "lat": 53.36586817010728,
+                            "lng": -6.258885879892722
+                        }
+                    }
+                },
+                "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+                "icon_background_color": "#7B9EB0",
+                "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+                "name": "D.Hennessy Roofing",
+                "opening_hours": {
+                    "open_now": false
+                },
+                "photos": [
+                    {
+                        "height": 1536,
+                        "html_attributions": [
+                            "<a href=\"https://maps.google.com/maps/contrib/107549571200409648040\">Brian Rogers</a>"
+                        ],
+                        "photo_reference": "AdCG2DOChEsSV2IwNLhnkeCNBe7Fju-naeFJh407wblRiohb_qo0ZXaOwYdWTStellbkehUv_kzk_N80fZzHkam6fUbbq7m2-asAv8vllx0EqjB9ZHXKie4EGmpCNVvbEThVJhjAp1BigG2LUYqot-Go-1S8S0ECAr3WQFK8xUipn2pvZFc4",
+                        "width": 2048
+                    }
+                ],
+                "place_id": "ChIJAz8XNUsJZ0gRaoeqhrfGc4I",
+                "plus_code": {
+                    "compound_code": "9P8V+W2 Dublin 9, Whitehall, Ireland",
+                    "global_code": "9C5M9P8V+W2"
+                },
+                "rating": 4.9,
+                "reference": "ChIJAz8XNUsJZ0gRaoeqhrfGc4I",
+                "types": [
+                    "roofing_contractor",
+                    "store",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "user_ratings_total": 203,
+                "website": "http://www.dhennessyroofing.ie/",
+                "phoneNumber": "(01) 830 4004",
+                "email": "info@dhennessyroofing.ie",
+                "socialLinks": []
+            },
+            {
+                "business_status": "OPERATIONAL",
+                "formatted_address": "5 Kilmurry Ave, Killalee, Garryowen, Co. Limerick, V94 VF6A, Ireland",
+                "geometry": {
+                    "location": {
+                        "lat": 52.6622697,
+                        "lng": -8.6098868
+                    },
+                    "viewport": {
+                        "northeast": {
+                            "lat": 52.66368082989271,
+                            "lng": -8.608557720107278
+                        },
+                        "southwest": {
+                            "lat": 52.66098117010727,
+                            "lng": -8.611257379892722
+                        }
+                    }
+                },
+                "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+                "icon_background_color": "#7B9EB0",
+                "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+                "name": "TG ROOFING AND BUILDING LTD",
+                "opening_hours": {
+                    "open_now": false
+                },
+                "photos": [
+                    {
+                        "height": 720,
+                        "html_attributions": [
+                            "<a href=\"https://maps.google.com/maps/contrib/108450549587555648966\">TG Roofing</a>"
+                        ],
+                        "photo_reference": "AdCG2DPd_jLtlSiUnbGwzznWO6V9pT--HHHHdw2BXsHlyThYMjVZGtUZ7KvApTNY5mEq99WcUTnPTJsiF3kd0FqPE1hMdnnmIjXDOos-O07FX9gtu9KFE5RG-NqK59620CuXC8Ppz8nH_7Jn3wmZQYpizAoX67H41yWhiP2C6XeFksGD9Snk",
+                        "width": 960
+                    }
+                ],
+                "place_id": "ChIJMzPHL6GhXEgRKK0dOyY-MqE",
+                "plus_code": {
+                    "compound_code": "M96R+W2 Garryowen, County Limerick, Ireland",
+                    "global_code": "9C4HM96R+W2"
+                },
+                "rating": 4.9,
+                "reference": "ChIJMzPHL6GhXEgRKK0dOyY-MqE",
+                "types": [
+                    "roofing_contractor",
+                    "general_contractor",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "user_ratings_total": 109,
+                "website": "https://www.tgroofing.ie/contact-tg-roofing-contractors/",
+                "phoneNumber": "086 089 6343",
+                "email": "info@tgroofing.ie",
+                "socialLinks": [
+                    "https://www.facebook.com/tonyroofing100"
+                ]
+            }
+        ],
+        "count": 10
+    },
+    "status": 200,
+    "statusText": "OK",
+    "headers": {
+        "content-length": "14564",
+        "content-type": "application/json; charset=utf-8"
+    },
+    "config": {
+        "transitional": {
+            "silentJSONParsing": true,
+            "forcedJSONParsing": true,
+            "clarifyTimeoutError": false
+        },
+        "adapter": [
+            "xhr",
+            "http",
+            "fetch"
+        ],
+        "transformRequest": [
+            null
+        ],
+        "transformResponse": [
+            null
+        ],
+        "timeout": 0,
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN",
+        "maxContentLength": -1,
+        "maxBodyLength": -1,
+        "env": {},
+        "headers": {
+            "Accept": "application/json, text/plain, */*"
+        },
+        "params": {
+            "q": "ireland roofer",
+            "num": 10
+        },
+        "method": "get",
+        "url": "http://192.168.137.37:5000/api/search/search"
+    },
+    "request": {
+        "__METHOD__": "GET",
+        "__URL__": "http://192.168.137.37:5000/api/search/search?q=ireland+roofer&num=10",
+        "requestMethod": "GET"
+    }
+}
