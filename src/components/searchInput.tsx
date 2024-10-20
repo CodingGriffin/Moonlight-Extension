@@ -28,7 +28,9 @@ interface ScrapedData {
 const SearchInput: React.FC = () => {
     const [isSearching, setIsSearching] = useState(false);
     const [inputValue, setInputValue] = useState('');
+    const [searchCount, setSearchCount] = useState('');
     const [noKeyword, setNoKeyWord] = useState(false);
+    const [noCount, setNoCount] = useState(false);
     const [results, setResults] = useState<ScrapedData[]>([]);
 
     const searchFunc = async () => {
@@ -50,14 +52,14 @@ const SearchInput: React.FC = () => {
     };
     
     const searchFuncHandle = () => {
-        if (inputValue != '') {
+        if (inputValue != '' && searchCount != '') {
             setIsSearching(true);
             setNoKeyWord(false);
+            setNoCount(false);
             searchFunc();
         }
-        else {
-            setNoKeyWord(true);
-        }
+        inputValue ? setNoKeyWord(false) :setNoKeyWord(true);
+        searchCount ? setNoCount(false) :setNoCount(true);
     }
     
     const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -72,7 +74,14 @@ const SearchInput: React.FC = () => {
             setNoKeyWord(false);
         }
     }
-    console.log("results============>", results);
+
+    const countChangeHandle = (e:any) => {
+        const value = e.target.value;
+        if (/^\d*$/.test(value)) {
+            setSearchCount(value);
+            setNoCount(false);
+        }
+    }
     
     const exportHandle = async () => {
         try {
@@ -97,13 +106,17 @@ const SearchInput: React.FC = () => {
     return (
         <>
             <div>
-                <div className="relative m-8 mb-5 rounded-md shadow-sm">
+                <div className='text-left ml-8 mt-3 mb-1 font-["Arima"] dark:text-white'>
+                    Keywords:
+                    {noKeyword?<label className='text-red-500 ml-1'>Please enter the keywords!</label>:<></>}
+                </div>
+                <div className="relative mx-8 rounded-md shadow-sm">
                     <input
                         id="search"
                         name="search"
                         type="text"
                         placeholder="Search here..."
-                        className="block w-full dark:bg-black rounded-md border-2 border-gray-300 py-1.5 px-3 text-white placeholder:text-gray-400 sm:text-lg sm:leading-8"
+                        className="block w-full dark:bg-black rounded-md border-2 border-gray-300 px-3 dark:text-white placeholder:text-gray-400 sm:text-lg sm:leading-8"
                         onChange={onChangeHandle}
                         onKeyDown={handleKeyPress}
                     />
@@ -135,14 +148,21 @@ const SearchInput: React.FC = () => {
                             }
                     </div>
                 </div>
-                {noKeyword?<label className='text-red-500'>Please enter the keywords!</label>:<></>}
-                {/* <div>
-                    <ul>
-                        {results.map((result, index) => (
-                            <li key={index}>{JSON.stringify(result)}</li>
-                        ))}
-                    </ul>
-                </div> */}
+                <div className='text-left ml-8 mt-3 mb-1 font-["Arima"] dark:text-white'>
+                    Limited Number:
+                    {noCount?<label className='text-red-500 ml-1'>Please enter the Correct Quantity!</label>:<></>}
+                </div>
+                <div className="relative mx-8 mt-1 rounded-md shadow-sm">
+                    <input
+                        id="searchCount"
+                        name="searchCount"
+                        type="text"
+                        placeholder="10"
+                        className="block w-full dark:bg-black rounded-md border-2 border-gray-300 px-3 dark:text-white placeholder:text-gray-400 sm:text-lg sm:leading-8"
+                        onChange={countChangeHandle}
+                        onKeyDown={handleKeyPress}
+                    />
+                </div>
                 <div className="grid grid-cols-1 gap-4">
                     {results.map((result, index) => (
                     <div key={index} className="border p-4 rounded shadow-md">
