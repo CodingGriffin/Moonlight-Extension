@@ -6,17 +6,18 @@ import SimpleButton from './simpleButton';
 // }
 
 interface ScrapedData {
-    address: string;
-    country: string;
-    email: string;
-    firstParagraph: string;
-    googleReviewRating: string;
-    industry: string;
     name: string;
-    phone: string;
-    title: string;
-    url: string;
+    types: [];
+    formatted_address: string;
+    phoneNumber: string;
+    email: string;
+    socialLinks:[];
     website: string;
+    business_status:string;
+    opening_hours:{open_now:Boolean};
+    rating:string;
+    user_ratings_total:string;
+    
 }
 
 // interface ApiResponse {
@@ -35,20 +36,19 @@ const SearchInput: React.FC = () => {
             const response = await axios.get('http://192.168.137.37:5000/api/search/search', {
                 params: {
                     q: inputValue,
-                    num:1,
+                    num:50,
                 },
             });
 
             setResults(response.data.scrapedData);
             setIsSearching(false);
 
-            console.log("results============>", results);
         } catch (error) {
             console.log('Error fetching data:', error);
             setIsSearching(false);
         }
     };
-
+    
     const searchFuncHandle = () => {
         if (inputValue != '') {
             setIsSearching(true);
@@ -59,20 +59,21 @@ const SearchInput: React.FC = () => {
             setNoKeyWord(true);
         }
     }
-
+    
     const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === 'Enter') {
             searchFuncHandle();
         }
     }
-
+    
     const onChangeHandle = (e:any) => {
         setInputValue(e.target.value);
         if (inputValue != '') {
             setNoKeyWord(false);
         }
     }
-
+    console.log("results============>", results);
+    
     const exportHandle = async () => {
         try {
             const response = await axios.post("http://192.168.137.37:5000/api/result/export", {data: results}, {
@@ -145,13 +146,17 @@ const SearchInput: React.FC = () => {
                 <div className="grid grid-cols-1 gap-4">
                     {results.map((result, index) => (
                     <div key={index} className="border p-4 rounded shadow-md">
-                        <h2 className="text-lg font-bold text-yellow-500">{result.title}</h2>
-                        <p className="text-gray-300">Name: {result.name || 'No Data'}</p>
-                        <p className="text-gray-300">Phone: {result.phone || 'No Data'}</p>
-                        <p className="text-gray-300">Email: {result.email || 'No Data'}</p>
-                        <p className="text-gray-300">Address: {result.address || 'No Data'}</p>
-                        <p className="text-gray-300">Website: <a href={result.url} className="text-blue-500 hover:underline">{result.url}</a></p>
-                        <p className="text-gray-300">First Paragraph: {result.firstParagraph || 'No Data'}</p>
+                        <h2 className="text-lg font-bold text-yellow-500">{result.name}</h2>
+                        <p className="text-gray-300">Industry: {result.types? result.types.map((item:any) => (item + ", ")):'No Data'}</p>
+                        <p className="text-gray-300">Address: {result.formatted_address || 'No Data'}</p>
+                        <p className="text-gray-300">Phone Number: {result.phoneNumber || 'No Data'}</p>
+                        <p className="text-gray-300">Email Address: {result.email || 'No Data'}</p>
+                        <p className="text-gray-300">Social Links: {result.socialLinks ? result.socialLinks.map((sl:any) => sl + ", ") : 'No Data'}</p>
+                        <p className="text-gray-300">Website: <a href={result.website} className="text-blue-500 hover:underline">{result.website}</a></p>
+                        <p className="text-gray-300">Business_status: {result.business_status || 'No Data'}</p>
+                        <p className="text-gray-300">Opening hours: {result.opening_hours.open_now? 'Open':'Close'}</p>
+                        <p className="text-gray-300">Google Review Rating: {result.rating || 'No Data'}</p>
+                        <p className="text-gray-300">User Ratings Total: {result.user_ratings_total || 'No Data'}</p>
                     </div>
                     ))}
                 </div>

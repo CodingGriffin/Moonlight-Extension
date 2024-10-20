@@ -1,15 +1,14 @@
 import React from 'react';
-import MoonLogo from '../components/moonLogo';
 import SearchInput from '../components/searchInput';
+import Header from '../components/header';
 
 
 const HomePage: React.FC = () => {
     return (
         <>
         <div className='text-center'>
-            <h1 className='text-2xl font-bold text-white p-5'>Moonlight</h1>
-            <hr />
-            <MoonLogo />
+            <Header />
+            <hr className='mt-3' />
             <SearchInput />
         </div>
         </>
