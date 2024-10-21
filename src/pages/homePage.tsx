@@ -4,6 +4,11 @@ import Header from '../components/header';
 
 
 const HomePage: React.FC = () => {
+    localStorage.setItem('pageId', '/home');
+
+    setTimeout(() => {
+        localStorage.removeItem('pageId');
+    }, 30 * 60 * 1000);
     return (
         <>
         <div className='text-center'>

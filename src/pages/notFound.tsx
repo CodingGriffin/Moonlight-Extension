@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Navigate } from 'react-router-dom';
 
 const NotFound: React.FC = () => {
-  return <h1 className='text-white'>404 - Not Found</h1>;
+  const [showPage, setShowPage] = useState('');
+  useEffect(() => {
+    const storedValue = localStorage.getItem('pageId');
+    if (storedValue) {
+      setShowPage(storedValue);
+    } else {
+      localStorage.setItem('pageId', '/login');
+      setShowPage('/login');
+    }
+  }, []);
+  return <Navigate to={showPage} replace />;
 };
 
 export default NotFound;

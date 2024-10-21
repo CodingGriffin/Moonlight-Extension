@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginPage from './pages/loginPage';
 import HomePage from './pages/homePage';
 import DetailPage from './pages/detailPage';
-// import NotFound from './pages/notFound';
+import NotFound from './pages/notFound';
 // import Navigation from './pages/navigation';
 
 const App: React.FC = () => {
@@ -11,10 +11,10 @@ const App: React.FC = () => {
     <Router>
       {/* <Navigation /> */}
       <Routes>
-        <Route path="*" Component={LoginPage} />
-        <Route path='/home' Component={HomePage} />
-        <Route path='/detail' Component={DetailPage} />
-        {/* <Route path='*' Component={NotFound} /> */}
+        <Route path="/login" element={<LoginPage />} />
+        <Route path='/home' element={<HomePage />} />
+        <Route path='/detail' element={<DetailPage />} />
+        <Route path='*' Component={NotFound} />
       </Routes>
     </Router>
   );

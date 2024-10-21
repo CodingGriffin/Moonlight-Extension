@@ -4,9 +4,15 @@ import { useLocation, useNavigate } from "react-router-dom";
 import SimpleButton from "../components/simpleButton";
 
 const DetailPage: React.FC = () => {
+    const navigate = useNavigate();
+
+    localStorage.setItem('pageId', '/detail');
+    setTimeout(() => {
+        localStorage.removeItem('pageId');
+    }, 30 * 60 * 1000);
+
   const location = useLocation();
   const { state } = location;
-  const navigate = useNavigate();
   const handleGoBack = () => {
     navigate(-1);
   }

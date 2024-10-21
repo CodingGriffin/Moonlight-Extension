@@ -1,13 +1,19 @@
-import React from 'react';
 import PasswordPanel from '../components/passwordPanel';
 import SimpleButton from '../components/simpleButton';
 import { useNavigate } from 'react-router-dom';
 import ModeToggle from '../components/modeToggle';
 
-const LoginPage: React.FC = () => {
+const LoginPage = () => {
     const navigate = useNavigate();
+
+    localStorage.setItem('pageId', '/login');
+    setTimeout(() => {
+        localStorage.removeItem('pageId');
+    }, 30 * 60 * 1000);
+
     const unlockButtonHandle = () => {
         console.log("ok");
+        localStorage.setItem('pageId', '/home');
         navigate('/home');
     }
     return (
