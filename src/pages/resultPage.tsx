@@ -54,7 +54,7 @@ const ResultPage = () => {
             <Header />
             <hr className='mt-3 mb-1' />
             <div className="grid grid-cols-10 items-center">
-                <div className="cursor-pointer" onClick={handleGoBack}>
+                <div className="cursor-pointer ml-3" onClick={handleGoBack}>
                     <svg
                     width="20"
                     height="20"

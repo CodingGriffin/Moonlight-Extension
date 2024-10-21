@@ -1,11 +1,17 @@
+import { useState } from "react";
 import ModeToggle from "./modeToggle";
 import Avatar from "./svg/avatar";
 import MenuBtnIcon from "./svg/menuBtnIcon";
+import MenuModal from "./menuModal";
 
 const Header = () => {
+    const [isShowed, setIsShowed] = useState(false);
+    const menuBtnHandle = () => {
+        setIsShowed(!isShowed);
+    }
     return (
         <div className="flex justify-between items-center mt-3 mx-3">
-            <div className="">
+            <div className="cursor-pointer" onClick={menuBtnHandle}>
                 <MenuBtnIcon />
             </div>
             <div className="flex justify-center items-center">
@@ -15,6 +21,8 @@ const Header = () => {
             <div className="">
                 <ModeToggle />
             </div>
+
+            {isShowed && <MenuModal onClose={() => setIsShowed(!isShowed)} />}
         </div>
     )
 }
