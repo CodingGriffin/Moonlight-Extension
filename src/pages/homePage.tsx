@@ -7,7 +7,7 @@ const HomePage: React.FC = () => {
     localStorage.setItem('pageId', '/home');
 
     setTimeout(() => {
-        localStorage.removeItem('pageId');
+        localStorage.clear();
     }, 30 * 60 * 1000);
     return (
         <>

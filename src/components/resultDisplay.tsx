@@ -22,6 +22,7 @@ const ResultDisplay = ({ results }:any) => {
     };
 
     const showDetailHandle = (data:any) => {
+        localStorage.setItem('detailData', JSON.stringify(data));
         navigate('/detail', {state:data});
     }
 

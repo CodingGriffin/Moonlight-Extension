@@ -8,7 +8,7 @@ const LoginPage = () => {
 
     localStorage.setItem('pageId', '/login');
     setTimeout(() => {
-        localStorage.removeItem('pageId');
+        localStorage.clear();
     }, 30 * 60 * 1000);
 
     const unlockButtonHandle = () => {
