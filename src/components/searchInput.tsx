@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import SimpleButton from './simpleButton';
-import MImage from './mImage';
+// import MImage from './mImage';
 import { useNavigate } from 'react-router-dom';
+// import MapPanel from './MapPanel';
 // import mockData from '../mockData/scrapedData.json';
 // interface SearchProps {
 //     searchFunc: Function;
@@ -35,6 +36,65 @@ const SearchInput: React.FC = () => {
     const [noKeyword, setNoKeyWord] = useState(false);
     const [noCount, setNoCount] = useState(false);
     // const [results, setResults] = useState<ScrapedData[]>([]);
+
+    const [location, setLocation] = useState<{ latitude: number; longitude: number } | null>(null);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        const getLocation = () => {
+           if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                const { latitude, longitude } = position.coords;
+                setLocation({ latitude, longitude });
+                },
+                (error) => {
+                switch (error.code) {
+                    case error.PERMISSION_DENIED:
+                    setError('User denied the request for Geolocation.');
+                    break;
+                    case error.POSITION_UNAVAILABLE:
+                    setError('Location information is unavailable.');
+                    break;
+                    case error.TIMEOUT:
+                    setError('The request to get user location timed out.');
+                    break;
+                    // case error.UNKNOWN_ERROR:
+                    //   setError('An unknown error occurred.');
+                    //   break;
+                }
+                }
+            );
+            } else {
+            setError('Geolocation is not supported by this browser.');
+            }
+        };
+
+        getLocation();
+    }, []);
+
+
+    const getLocationByKeyword = async () => {
+    try {
+        const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(inputValue)}&key=AIzaSyD8pk2ZnpR82LXx3IJUXFbaRnhZ27hR4ZY`);
+        const data = await response.json();
+
+        if (data.results.length > 0) {
+        const { lat, lng } = data.results[0].geometry.location;
+        setLocation({ latitude: lat, longitude: lng });
+        }
+    } catch (error) {
+        console.log('Error fetching location. Please try again.');
+    }
+    }
+
+    const getMapSrc = () => {
+        if (location) {
+            const { latitude, longitude } = location;
+            return `https://www.google.com/maps/embed/v1/view?key=AIzaSyD8pk2ZnpR82LXx3IJUXFbaRnhZ27hR4ZY&center=${latitude},${longitude}&zoom=14`;
+        }
+        return '';
+    };
 
     const navigate = useNavigate();
 
@@ -88,6 +148,7 @@ const SearchInput: React.FC = () => {
         setInputValue(e.target.value);
         if (inputValue != '') {
             setNoKeyWord(false);
+            getLocationByKeyword();
         }
     }
 
@@ -148,14 +209,29 @@ const SearchInput: React.FC = () => {
                     />
                 </div>
                 
-                <div className='mt-3'>
-                    <MImage 
+                <div className='mt-3 flex justify-center'>
+                    {/* <MImage 
                         imgSrc={!isSearching?
                             './images/search_start.png' :
                             './images/search_waiting.png'
                         } 
                         width='200px' 
-                    />
+                    /> */}
+                    {/* <MapPanel place={inputValue}/> */}
+                    {error && <p>Error: {error}</p>}
+                    {location ? (
+                        <figure>
+                            <iframe
+                            src={getMapSrc()}
+                            width="400"
+                            height="250"
+                            loading="lazy"
+                            title="Google Map"
+                            ></iframe>
+                        </figure>
+                        ) : (
+                        <p>Getting location...</p>
+                    )}
                 </div>
                 <div>
                     <SimpleButton title='Click here to search...' clickHandle={searchFuncHandle} isDisable={isSearching} />

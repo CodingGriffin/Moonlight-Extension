@@ -2,7 +2,11 @@
   "manifest_version": 3,
   "name": "Moonlight",
   "version": "1.0",
-  "permissions": ["storage"],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "geolocation"
+  ],
   "action": {
     "default_popup": "index.html",
     "default_icon": {
