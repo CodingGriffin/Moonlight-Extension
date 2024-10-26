@@ -73,7 +73,7 @@ const LoginPage = () => {
             </div>
             <SimpleButton title={"Unlock"} clickHandle={unlockButtonHandle} isDisable={false} />
             <div className='font-["Arima"] text-center dark:text-white'> 
-                Need help? Contact <span className='text-blue-600'>Moonlight Support</span>
+                Need help? Contact <a href="https://moonlightexpert.com/" target="_blank"><span className='text-blue-600'>Moonlight Support</span></a>
             </div>
         </div>
     );
