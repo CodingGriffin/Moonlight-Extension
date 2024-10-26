@@ -25,6 +25,12 @@ const LoginPage = () => {
         }
     }
 
+    const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+        if (event.key === 'Enter') {
+            unlockButtonHandle();
+        }
+    }
+
     return (
         <div className='container mx-auto px-4 mt-10'>
             <div className='fixed right-5 top-2'>
@@ -50,6 +56,7 @@ const LoginPage = () => {
                         placeholder="Your unlock passcode"
                         className="block w-full bg-white rounded-md border-2 border-gray-200 py-3 px-3 placeholder:text-gray-400 dark:bg-black dark:text-white"
                         onChange={(e) => setPassword(e.target.value)}
+                        onKeyDown={handleKeyPress}
                     />
                     <div className="absolute inset-y-0 right-0 flex items-center">
                         <button className="mr-3" onClick={() => setIsPassword(!isPassword)}>

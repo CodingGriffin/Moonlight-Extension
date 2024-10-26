@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import SimpleButton from './simpleButton';
 // import MImage from './mImage';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 // import MapPanel from './MapPanel';
 // import mockData from '../mockData/scrapedData.json';
 // interface SearchProps {
@@ -96,7 +96,28 @@ const SearchInput: React.FC = () => {
         return '';
     };
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
+
+    const exportHandle = async ({exportData}:any) => {
+        try {
+            const response = await axios.post("http://192.168.137.37:5000/api/result/export", {data: exportData}, {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            const exportUrl = response.data.url; // Assuming the response has a `url` field with the link.
+        
+            if (exportUrl) {
+                // Open the URL in a new tab
+                window.open(exportUrl, '_blank');
+                // window.location.href = exportUrl;
+            } else {
+                console.log('No URL returned in export response');
+            }
+        } catch (error) {
+            console.error('Error exporting data:', error);
+        }
+    }
 
     const searchFunc = async () => {
         try {
@@ -107,10 +128,12 @@ const SearchInput: React.FC = () => {
                 },
             });
             console.log(JSON.stringify(response.data.scrapedData));
-            localStorage.setItem("data", JSON.stringify(response.data.scrapedData));
+            // localStorage.setItem("data", JSON.stringify(response.data.scrapedData));
             // setResults(response.data.scrapedData);
+            exportHandle(response);
             setIsSearching(false);
-            navigate('/result', {state:response.data.scrapedData});
+            // navigate('/result', {state:response.data.scrapedData});
+
 
         } catch (error) {
             console.log('Error fetching data:', error);
