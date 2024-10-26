@@ -32,7 +32,7 @@ const LoginPage = () => {
     }
 
     return (
-        <div className='container mx-auto px-4 mt-10'>
+        <div className='container mx-auto px-4 pt-10'>
             <div className='fixed right-5 top-2'>
                 <ModeToggle />
             </div>

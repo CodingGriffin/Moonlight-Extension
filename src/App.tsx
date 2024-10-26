@@ -6,6 +6,7 @@ import DetailPage from './pages/detailPage';
 import NotFound from './pages/notFound';
 import ResultPage from './pages/resultPage';
 import SettingPage from './pages/settingPage';
+import LaunchPage from './pages/launchPage';
 // import Navigation from './pages/navigation';
 
 const App: React.FC = () => {
@@ -13,6 +14,7 @@ const App: React.FC = () => {
     <Router>
       {/* <Navigation /> */}
       <Routes>
+        <Route path="/launch" element={<LaunchPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path='/home' element={<HomePage />} />
         <Route path='/result' element={<ResultPage />} />

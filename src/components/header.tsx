@@ -10,7 +10,7 @@ const Header = () => {
         setIsShowed(!isShowed);
     }
     return (
-        <div className="flex justify-between items-center mt-3 mx-3">
+        <div className="flex justify-between items-center pt-3 mx-3">
             <div className="cursor-pointer" onClick={menuBtnHandle}>
                 <MenuBtnIcon />
             </div>

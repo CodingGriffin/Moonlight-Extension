@@ -186,7 +186,6 @@ const SearchInput: React.FC = () => {
     
     return (
         <>
-            <div>
                 <div className='text-left ml-8 mt-3 mb-1 font-["Arima"] dark:text-white'>
                     Keywords:
                     {noKeyword?<label className='text-red-500 ml-1'>Please enter the keywords!</label>:<></>}
@@ -256,11 +255,7 @@ const SearchInput: React.FC = () => {
                         <p>Getting location...</p>
                     )}
                 </div>
-                <div>
-                    <SimpleButton title='Click here to search...' clickHandle={searchFuncHandle} isDisable={isSearching} />
-                </div>
-                
-            </div>
+                <SimpleButton title='Click here to search...' clickHandle={searchFuncHandle} isDisable={isSearching} />
         </>
     );
 };
