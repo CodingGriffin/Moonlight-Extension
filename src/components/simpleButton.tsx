@@ -1,4 +1,5 @@
 import React from "react";
+import Loading from "./loading";
 
 interface SimpleButtonProps {
   title: string;
@@ -21,7 +22,7 @@ const SimpleButton: React.FC<SimpleButtonProps> = ({
           onClick={clickHandle}
           disabled={isDisable}
         >
-          {title}
+          {isDisable? <Loading /> :title }
         </button>
       </div>
     </>
