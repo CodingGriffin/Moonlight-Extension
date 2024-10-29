@@ -98,7 +98,8 @@ const SearchInput: React.FC = () => {
 
     // const navigate = useNavigate();
 
-    const exportHandle = async ({exportData}:any) => {
+    const exportHandle = async (exportData:any) => {
+        console.log(" before exporting exportData===>", exportData);
         try {
             const response = await axios.post("http://192.168.137.37:5000/api/result/export", {data: exportData}, {
                 headers: {
@@ -114,32 +115,43 @@ const SearchInput: React.FC = () => {
             } else {
                 console.log('No URL returned in export response');
             }
+            console.log("exporting")
         } catch (error) {
             console.error('Error exporting data:', error);
         }
     }
 
-    const searchFunc = async () => {
-        try {
-            const response = await axios.get('http://192.168.137.37:5000/api/search/search', {
-                params: {
-                    q: inputValue,
-                    num:parseInt(searchCount),
-                },
-            });
-            console.log(JSON.stringify(response.data.scrapedData));
-            // localStorage.setItem("data", JSON.stringify(response.data.scrapedData));
-            // setResults(response.data.scrapedData);
-            exportHandle(response);
-            setIsSearching(false);
-            // navigate('/result', {state:response.data.scrapedData});
-
-
-        } catch (error) {
-            console.log('Error fetching data:', error);
-            setIsSearching(false);
-        }
+    const searchFunc = () => {
+        return new Promise(async (resolve, reject) => { // Removed the extra parentheses
+            try {
+                const response = await axios.get('http://192.168.137.37:5000/api/search/search', {
+                    params: {
+                        q: inputValue,
+                        num: parseInt(searchCount),
+                    },
+                });
+    
+                console.log(JSON.stringify(response.data.scrapedData));
+    
+                // Set results in state
+                // setResults(response.data.scrapedData);
+                setIsSearching(false);
+    
+                // Resolve the promise with the scraped data
+                const scrapedData = response.data.scrapedData;
+                resolve(scrapedData);
+                // Optionally navigate or perform other actions here
+                console.log("after searching in searchFunc", scrapedData)
+    
+            } catch (error) {
+                console.log('Error fetching data:', error);
+                setIsSearching(false);
+                // Reject the promise if there's an error
+                reject(error);
+            }
+        });
     };
+    
 
     // const searchFunc = async () => {
     //     // Simulate a delay to mimic an API call
@@ -150,12 +162,19 @@ const SearchInput: React.FC = () => {
     //     }, 1000); // Simulate a 1 second delay
     // };
     
-    const searchFuncHandle = () => {
+    const searchFuncHandle = async () => {
         if (inputValue != '' && searchCount != '') {
             setIsSearching(true);
             setNoKeyWord(false);
             setNoCount(false);
-            searchFunc();
+            console.log("before calling searchFunc")
+            searchFunc().then(result => {
+                console.log("after searchFunc", result)
+                exportHandle(result);
+                console.log("after exportHndle")
+            }).catch(error => {
+                console.log("Error in export data:", error);
+            });
         }
         inputValue ? setNoKeyWord(false) :setNoKeyWord(true);
         searchCount ? setNoCount(false) :setNoCount(true);
