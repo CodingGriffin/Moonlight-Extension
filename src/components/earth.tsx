@@ -172,49 +172,49 @@ const StyledWrapper = styled.div`
   }
 }
 
-#star-1 {
-  position: absolute;
-  left: -20px;
-  animation: twinkling 3s infinite;
-}
+// #star-1 {
+//   position: absolute;
+//   left: 220px;
+//   animation: twinkling 3s infinite;
+// }
 
-#star-2 {
-  position: absolute;
-  left: -40px;
-  top: 30px;
-  animation: twinkling 2s infinite;
-}
-#star-3 {
-  position: absolute;
-  left: 350px;
-  top: 90px;
-  animation: twinkling 4s infinite;
-}
-#star-4 {
-  position: absolute;
-  left: 200px;
-  top: 290px;
-  animation: twinkling 3s infinite;
-}
-#star-5 {
-  position: absolute;
-  left: 50px;
-  top: 270px;
-  animation: twinkling 1.5s infinite;
-}
+// #star-2 {
+//   position: absolute;
+//   left: 340px;
+//   top: 30px;
+//   animation: twinkling 2s infinite;
+// }
+// #star-3 {
+//   position: absolute;
+//   left: 350px;
+//   top: 90px;
+//   animation: twinkling 4s infinite;
+// }
+// #star-4 {
+//   position: absolute;
+//   left: 200px;
+//   top: 290px;
+//   animation: twinkling 3s infinite;
+// }
+// #star-5 {
+//   position: absolute;
+//   left: 50px;
+//   top: 270px;
+//   animation: twinkling 1.5s infinite;
+// }
 
-#star-6 {
-  position: absolute;
-  left: 250px;
-  top: -50px;
-  animation: twinkling 4s infinite;
-}
-#star-7 {
-  position: absolute;
-  left: 290px;
-  top: 60px;
-  animation: twinkling 2s infinite;
-}
+// #star-6 {
+//   position: absolute;
+//   left: 250px;
+//   top: -50px;
+//   animation: twinkling 4s infinite;
+// }
+// #star-7 {
+//   position: absolute;
+//   left: 290px;
+//   top: 60px;
+//   animation: twinkling 2s infinite;
+// }
 
 `;
 

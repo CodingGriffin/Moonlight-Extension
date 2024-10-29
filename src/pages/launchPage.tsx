@@ -3,22 +3,34 @@ import styled from "styled-components";
 import Earth from "../components/earth";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { getSessionData } from "../utils/sessionUtils";
 
 const LaunchPage = () => {
     const [showPage, setShowPage] = useState('');
   useEffect(() => {
-    const storedValue = localStorage.getItem('pageId');
-    if (storedValue) {
-      setShowPage(storedValue);
-    } else {
-      localStorage.setItem('pageId', '/login');
-      setShowPage('/login');
-    }
+    // const storedValue = localStorage.getItem('pageId');
+    // if (storedValue) {
+    //   setShowPage(storedValue);
+    // } else {
+    //   localStorage.setItem('pageId', '/login');
+    //   setShowPage('/login');
+    // }
+
+    getSessionData((sessionData) => {
+      if (sessionData) {
+        setShowPage(sessionData.data.token);
+        console.log(sessionData.data);
+      } else {
+        console.log("No valid session data found");
+        setShowPage('/login');
+      }
+    })
   }, []);
-    const navigate = useNavigate();
-    const launchHandle = () => {
-        navigate(showPage);
-    }
+
+  const navigate = useNavigate();
+  const launchHandle = () => {
+      navigate(showPage);
+  }
 
   return (
     <StyledWrapper>

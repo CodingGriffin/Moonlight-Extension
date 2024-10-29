@@ -3,6 +3,7 @@ import SimpleButton from '../components/simpleButton';
 import { useNavigate } from 'react-router-dom';
 import ModeToggle from '../components/modeToggle';
 import { useState } from 'react';
+import { saveSessionData } from '../utils/sessionUtils';
 
 const LoginPage = () => {
     const [isPassword, setIsPassword] = useState(true);
@@ -10,10 +11,9 @@ const LoginPage = () => {
     const [isInvalid, setIsInvalid] = useState(false);
     const navigate = useNavigate();
 
-    localStorage.setItem('pageId', '/login');
-    setTimeout(() => {
-        localStorage.clear();
-    }, 30 * 60 * 1000);
+    const sess_data = {name:'pageId', token:'/login'};
+    const expirationMin = 1;
+    saveSessionData(sess_data, expirationMin);
 
     const unlockButtonHandle = () => {
         console.log(password);
