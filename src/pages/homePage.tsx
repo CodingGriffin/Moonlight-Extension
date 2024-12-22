@@ -6,7 +6,7 @@ import { saveSessionData } from '../utils/sessionUtils';
 
 const HomePage: React.FC = () => {
     const sess_data = {name:'pageId', token:'/home'};
-    const expirationMin = 1;
+    const expirationMin = 30;
     saveSessionData(sess_data, expirationMin);
     
     return (

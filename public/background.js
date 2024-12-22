@@ -1,3 +1,8 @@
-const script = document.createElement('script');
-script.src = 'https://apis.google.com/js/api.js';
-document.head.appendChild(script);
+chrome.action.onClicked.addListener((tab) => {
+    chrome.windows.create({
+        url: chrome.runtime.getURL("index.html"),
+        type: "popup",
+        width: 400,
+        height: 600
+    });
+});

@@ -12,7 +12,7 @@ const LoginPage = () => {
     const navigate = useNavigate();
 
     const sess_data = {name:'pageId', token:'/login'};
-    const expirationMin = 1;
+    const expirationMin = 30;
     saveSessionData(sess_data, expirationMin);
 
     const unlockButtonHandle = () => {
